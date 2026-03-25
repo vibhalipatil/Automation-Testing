@@ -24,7 +24,6 @@ public class addToCart {
 		
 	}
 	
-	
 	public static void additeams(WebDriver driver ) {
 		String[] items = {"Brocolli", "Beans","Mushroom"}; 
 		List<WebElement> products = driver.findElements(By.className("product-name"));
