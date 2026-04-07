@@ -21,7 +21,8 @@ public class addToCart {
 		driver.findElement(By.xpath("//button[@class=\"promoBtn\"]")).click();
 		driver.findElement(By.xpath("//button[text()='Place Order']")).click();
 		driver.findElement(By.xpath("//option[text()='Select']")).click();
-		
+		driver.findElement(By.cssSelector("input[type='checkbox']")).click();
+		driver.findElement(By.xpath("//button[text()='Proceed']")).click();		
 	}
 	
 	public static void additeams(WebDriver driver ) {
@@ -31,7 +32,7 @@ public class addToCart {
 		for(int i=0; i < products.size(); i++) {
 			String[] product = products.get(i).getText().split("-");
 			String productname = product[0].trim();
-			List itemsneed = Arrays.asList(items); // converting array into list as we wand to compare value in productname with items  
+			List <String> itemsneed = Arrays.asList(items); // converting array into list as we wand to compare value in productname with items  
 			
 			if(itemsneed.contains(productname)) {
 				
