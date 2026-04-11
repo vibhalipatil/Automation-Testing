@@ -36,7 +36,6 @@ public class calenderTest {
 		Assert.assertEquals(actualList.get(i).getAttribute("value"), expectedList[i]);
 
 		}
-
 		driver.close();
 	}
 
