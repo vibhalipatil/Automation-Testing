@@ -37,12 +37,10 @@ public class fluentWait {
             driver.quit();
         }
     }
-
     // Method to click Start button
     public static void clickStartButton(WebDriver driver) {
         driver.findElement(START_BUTTON).click();
     }
-
     // Method to apply Fluent Wait and get element
     public static WebElement waitForElementUsingFluentWait(WebDriver driver) {
 
@@ -56,7 +54,6 @@ public class fluentWait {
             public WebElement apply(WebDriver driver) {
 
                 WebElement element = driver.findElement(FINISH_TEXT);
-
                 // Return element only if visible
                 if (element.isDisplayed()) {
                     return element;
@@ -65,7 +62,6 @@ public class fluentWait {
             }
         });
     }
-
     // Method to print result
     public static void printResult(WebElement element) {
         System.out.println("✅ Loaded Text: " + element.getText());
